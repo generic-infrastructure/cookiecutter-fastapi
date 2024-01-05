@@ -10,6 +10,7 @@ packages = [{include = "cookiecutter_fastapi", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
+cookiecutter = "^2.5.0"
 pydantic = "^2.5.2"
 pydantic-settings = "^2.1.0"
 
@@ -47,7 +48,7 @@ include = '\.pyi?$'
 [tool.ruff]
 line-length = 88
 target-version = "py310"
-src = ["src", "tests", "docs"]
+src = ["src", "tests"]
 select = ["F", "E", "W", "C90", "S", "I", "N", "D", "UP"]
 ignore = ["D100", "D104", "D106"]
 
@@ -56,7 +57,7 @@ convention = "pep257"
 
 [tool.mypy]
 python_version = "3.10"
-files = ["src", "tests", "docs"]
+files = ["src", "tests"]
 plugins = ["pydantic.mypy"]
 follow_imports = "silent"
 warn_redundant_casts = true
